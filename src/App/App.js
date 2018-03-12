@@ -4,7 +4,11 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div
+        id="wrap"
+        className="flex-container-column"
+        style={{minHeight: "452px"}}
+      >
         App
       </div>
     );
