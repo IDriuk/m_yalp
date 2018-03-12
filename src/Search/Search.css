@@ -1,0 +1,23 @@
+.search-bar {
+  z-index: 1026;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.search-bar:not(.masthead-minimal) {
+  position: fixed;
+}
+
+.menu-bar-pitch_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d32323;
+  height: 50px;
+}
+
+.menu-bar-pitch_container.cta-menubar-pitch_container {
+  height: 44px;
+}

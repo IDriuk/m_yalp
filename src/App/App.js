@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Search from '../Search/Search';
+
 class App extends Component {
   render() {
     return (
@@ -9,7 +11,7 @@ class App extends Component {
         className="flex-container-column"
         style={{minHeight: "452px"}}
       >
-        App
+        <Search />
       </div>
     );
   }
