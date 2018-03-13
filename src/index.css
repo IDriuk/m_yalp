@@ -65,3 +65,18 @@ a {
 img {
   vertical-align: middle;
 }
+
+p {
+  margin-bottom: 12px;
+}
+
+button {
+  overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  font-weight: normal;
+}

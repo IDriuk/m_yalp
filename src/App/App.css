@@ -6,6 +6,10 @@
   float: right !important;
 }
 
+.u-hidden {
+  display: none !important;
+}
+
 .page-link, .search-link {
   cursor: pointer;
 }

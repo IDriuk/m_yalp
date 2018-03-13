@@ -82,3 +82,20 @@
   box-align: center;
   align-items: center;
 }
+
+.menu-bar-pitch_menu-icons .menu-bar-pitch_menu-item {
+  padding: 10px;
+}
+
+.cta-menubar-pitch-icons .button-text .search-text {
+  line-height: 24px;
+}
+
+.cta-menubar-pitch-icons .button-text {
+  padding: 10px;
+  font-size: 14px;
+  display: inherit;
+  height: 44px;
+  border: none;
+  background-color: #d32323;
+}
