@@ -21,3 +21,64 @@
 .menu-bar-pitch_container.cta-menubar-pitch_container {
   height: 44px;
 }
+
+.yelp-logo-container {
+  margin: auto;
+  z-index: 1027;
+}
+
+.cta-menubar-pitch-icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.cta-menubar-pitch_left-icons {
+  display: flex;
+  box-align: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+.menu-bar-pitch_menu-icons {
+  display: flex;
+  box-align: center;
+  align-items: center;
+}
+
+.cta-menubar-pitch_right-icons {
+  padding-right: 0;
+}
+
+.menu-bar-pitch_open-in-app {
+  display: flex;
+  box-align: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 15px;
+  color: #fff;
+}
+
+.cta-menubar-pitch_left-icons .menu-bar-pitch_open-in-app {
+  font-size: 12px;
+  line-height: 1.5em;
+  height: 24px;
+  line-height: 24px;
+  padding: 2px 8px 2px 3px;
+  margin: 6px 10px;
+  border-radius: 3px;
+  display: inline;
+  border: #91151c solid 1px;
+  background-color: #bc1d25;
+}
+
+.menu-bar-pitch_open-in-app .button-content {
+  display: flex;
+  box-align: center;
+  align-items: center;
+}

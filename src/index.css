@@ -56,3 +56,12 @@ body.responsive {
     line-height: 1.5em;
   }
 }
+
+a {
+  color: #0073bb;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
