@@ -33,10 +33,9 @@ class Nearby extends Component {
                 <span
                   className="icon icon--size-24 u-space-r1"
                   style={{width: "24px", height: "24px"}}>
-                >
                   <Icon />
-                  {name}
                 </span>
+                {name}
               </a>
             </li>)}
 

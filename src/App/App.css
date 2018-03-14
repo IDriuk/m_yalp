@@ -10,6 +10,10 @@
   display: none !important;
 }
 
+.u-space-r1 {
+  margin-right: 6px !important;
+}
+
 .page-link, .search-link {
   cursor: pointer;
 }
@@ -106,4 +110,29 @@
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+.flex-box {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.page-content {
+  position: relative;
+  background: #f5f5f5;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 52px;
+}
+
+.no-top-space {
+  padding-top: 42px;
+}
+
+.flex-container-column > .flex-box,
+.textarea-modal .modal-content > .flex-box {
+  flex: 1 0 auto;
+  min-width: 0;
+  min-height: 0;
 }

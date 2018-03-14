@@ -80,3 +80,11 @@ button, input, optgroup, select, textarea {
   margin: 0;
   font-weight: normal;
 }
+
+ol, ul {
+  list-style: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
