@@ -14,8 +14,16 @@
   margin-right: 6px !important;
 }
 
+.text-centered {
+  text-align: center;
+}
+
 .page-link, .search-link {
   cursor: pointer;
+}
+
+.home section {
+  margin-bottom: 25px;
 }
 
 #root {
