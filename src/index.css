@@ -88,3 +88,31 @@ ol, ul {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
+h2 {
+  overflow-wrap: break-word !important;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 21px;
+  line-height: 1.28571em;
+  color: #d32323;
+}
+
+h4 {
+  overflow-wrap: break-word !important;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.28571em;
+  color: #333;
+}
+
+address {
+  display: block;
+  font-style: normal;
+}
+
+small {
+  font-size: 12px;
+  line-height: 1.5em;
+}
