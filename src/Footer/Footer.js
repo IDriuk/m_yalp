@@ -26,7 +26,7 @@ class Footer extends Component {
                               <span className="dropdown_prefix">English</span>
                               <span className="dropdown_toggle-text"></span>
                               <span
-                                className="icon icon--14-triangle-down icon--size-14 icon--currentColor u-triangle-direction-down dropdown_arrow"
+                                className="icon icon--currentColor dropdown_arrow"
                                 style={{width: "14px", height: "14px"}}
                               >
                                 <TriangleDown />
@@ -102,11 +102,11 @@ class Footer extends Component {
                       <div>
                         <div className="dropdown dropdown--hover dropdown--boxed-on-mobile dropdown--separate-groups dropdown--restricted">
                           <div className="dropdown_toggle js-dropdown-toggle">
-                            <a className="dropdown_toggle-action">
+                            <a className="dropdown_toggle-action" data-dropdown-prefix >
                               <span className="dropdown_prefix">United States</span>
                               <span className="dropdown_toggle-text"></span>
                               <span
-                                className="icon icon--14-triangle-down icon--size-14 icon--currentColor u-triangle-direction-down dropdown_arrow"
+                                className="icon icon--currentColor dropdown_arrow"
                                 style={{width: "14px", height: "14px"}}
                               >
                                 <TriangleDown />
@@ -156,9 +156,9 @@ class Footer extends Component {
                 </ul>
               </div>
               <small className="main-footer_copyright">
-                Copyright © 2004–2018 Yelp Inc. Yelp,
-                <img className="main-footer_logo-copyright" src={logo} alt="logo" />,
-                <img className="main-footer_logo-burst" src={burst} alt="burst" />
+                Copyright © 2004–2018 Yelp Inc. Yelp,&nbsp;
+                <img className="main-footer_logo-copyright" src={logo} alt="logo" />,&nbsp;
+                <img className="main-footer_logo-burst" src={burst} alt="burst" />&nbsp;
                 and related marks are registered trademarks of Yelp.
               </small>
             </div>

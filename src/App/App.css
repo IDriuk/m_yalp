@@ -18,6 +18,10 @@
   margin-bottom: 0px !important;
 }
 
+.u-text-centered {
+  text-align: center !important;
+}
+
 .text-centered {
   text-align: center;
 }
@@ -91,6 +95,10 @@
 .icon--hover-white:hover,
 .icon--hover-white:focus {
   fill: #fff;
+}
+
+.icon--currentColor {
+  fill: currentColor;
 }
 
 .menu-bar-pitch_open-in-app
