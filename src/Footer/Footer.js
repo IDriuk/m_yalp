@@ -7,7 +7,19 @@ import logo from  '../assets/logo/logo_xsmall.png';
 import burst from '../assets/logo/burst_xsmall.png';
 
 class Footer extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showLanguage: false,
+      showCountry: false
+    }
+  }
+
   render() {
+    const { showLanguage, showCountry } = this.state;
+
     return (
       <div className="site-footer" >
         <div className="main-content-wrap main-content-wrap--separated">
@@ -20,8 +32,11 @@ class Footer extends Component {
                     <div className="footer-menu_section footer-language">
                       <h3 className="footer-menu_header responsive-hidden-small">Languages</h3>
                       <div>
-                        <div className="dropdown dropdown--hover dropdown--boxed-on-mobile dropdown--separate-groups dropdown--restricted">
-                          <div className="dropdown_toggle js-dropdown-toggle">
+                        <div
+                          onClick={() => this.setState({ showLanguage: !showLanguage, showCountry: false })}
+                          className={`dropdown dropdown--hover dropdown--boxed-on-mobile dropdown--separate-groups dropdown--restricted ${showLanguage ? "is-active" : ""}`}
+                        >
+                          <div className={`dropdown_toggle js-dropdown-toggle ${showLanguage ? "is-active" : ""}`}>
                             <a className="dropdown_toggle-action">
                               <span className="dropdown_prefix">English</span>
                               <span className="dropdown_toggle-text"></span>
@@ -34,7 +49,7 @@ class Footer extends Component {
                             </a>
                           </div>
                           <div className="dropdown_menu-container">
-                            <div className="dropdown_menu">
+                            <div className={`dropdown_menu ${showLanguage ? "is-visible" : "" }`}>
                               <div className="dropdown_menu-inner">
                                 <ul className="dropdown_menu-group">
                                   <li className="dropdown_item">
@@ -100,8 +115,10 @@ class Footer extends Component {
                     <div className="footer-menu_section footer-country">
                       <h3 className="footer-menu_header responsive-hidden-small">Countries</h3>
                       <div>
-                        <div className="dropdown dropdown--hover dropdown--boxed-on-mobile dropdown--separate-groups dropdown--restricted">
-                          <div className="dropdown_toggle js-dropdown-toggle">
+                        <div
+                          onClick={() => this.setState({ showCountry: !showCountry, showLanguage: false })}
+                          className={`dropdown dropdown--hover dropdown--boxed-on-mobile dropdown--restricted ${showCountry ? "is-active" : "" }`}>
+                          <div className={`dropdown_toggle js-dropdown-toggle ${showCountry ? "is-active" : "" }`}>
                             <a className="dropdown_toggle-action" data-dropdown-prefix >
                               <span className="dropdown_prefix">United States</span>
                               <span className="dropdown_toggle-text"></span>
@@ -114,7 +131,7 @@ class Footer extends Component {
                             </a>
                           </div>
                           <div className="dropdown_menu-container">
-                            <div className="dropdown_menu">
+                            <div className={`dropdown_menu ${showCountry ? "is-visible" : "" }`}>
                               <div className="dropdown_menu-inner">
                                 {[
                                   "Argentina",
