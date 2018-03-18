@@ -54,7 +54,7 @@
   word-break: break-all;
 }
 
-@media screen and (max-width: 479px) {
+/* @media screen and (max-width: 479px) { */
   .responsive small {
     font-size: 14px;
     line-height: 1.28571em;
@@ -127,7 +127,7 @@
     margin-left: auto;
   }
 
-}
+/* } */
 
 @media screen and (max-width: 989px) {
   .responsive .content-container {
