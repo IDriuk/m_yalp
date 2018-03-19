@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Search.css';
 
+import Modal from '../Modal/Modal';
+
 import logo from '../assets/logo/default.png';
 import MobileIcon from '../assets/18/mobile';
 import SearchIcon from '../assets/24/search';
@@ -32,6 +34,7 @@ class Search extends Component {
                 </div>
               </div>
             </div>
+            <Modal><div> </div></Modal>
 
             <div className="menu-bar-pitch_menu-icons cta-menubar-pitch_right-icons u-pull-right">
               <div className="menu-bar-pitch_menu-item">
