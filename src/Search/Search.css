@@ -99,3 +99,16 @@
   border: none;
   background-color: #d32323;
 }
+
+.cta-menubar-pitch-icons .button-text {
+  padding: 10px;
+  font-size: 14px;
+  display: inherit;
+  height: 44px;
+  border: none;
+  background-color: #d32323;
+}
+
+.cta-menubar-pitch-icons .button-text .search-text {
+  line-height: 24px;
+}

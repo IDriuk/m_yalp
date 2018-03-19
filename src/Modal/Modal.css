@@ -1,0 +1,91 @@
+/* searchbar-modal */
+.searchbar-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1026;
+  flex-direction: column;
+}
+
+.searchbar-modal.cta-menubar-pitch-modal {
+  top: 44px;
+  z-index: 1027;
+}
+
+.searchbar-modal:not(.u-hidden):not(.cta-modal-partly-compressed) {
+  bottom: 0;
+}
+
+.page-shim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.searchbar-modal .search-form {
+  position: relative;
+  z-index: 1;
+}
+
+.masthead {
+  border-bottom: 1px #d32323 solid;
+  background: #d32323;
+  background-size: 320px 90px;
+}
+
+.minimal-header .masthead {
+  text-align: center;
+}
+
+.searchbar-modal.cta-menubar-pitch-modal .masthead {
+  background: #d32323;
+}
+
+.flex-box {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.search-form .form-inputs {
+  padding: 6px 6px 0;
+}
+
+.search-form .fake-input {
+  border-radius: 7px;
+  border: 1px #d32323 solid;
+  height: 30px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+}
+
+.searchbar-modal.cta-menubar-pitch-modal .search-form .fake-input {
+  border-radius: 4px;
+}
+
+.search-form .search-icon.icon--size-18,
+.search-form .location-icon.icon--size-18 {
+  margin: 5px;
+  top: 0;
+}
+
+.search-form .input-holder {
+  position: relative;
+  height: 100%;
+}
+
+.searchbar-modal.cta-menubar-pitch-modal .search-form .cancel {
+  margin: 5px;
+  top: 0;
+}
+
+.icon--gray-regular {
+  fill: #ccc;
+}
