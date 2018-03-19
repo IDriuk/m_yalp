@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.css';
 
@@ -9,7 +9,7 @@ class Modal extends Component {
     super(props);
 
     this.el = document.createElement('div');
-    this.el.className = "flex-container searchbar-modal minimal-header cta-menubar-pitch-modal";
+    this.el.className = this.props.className;
   }
 
   componentDidMount() {
