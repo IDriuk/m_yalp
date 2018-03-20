@@ -98,7 +98,10 @@ class Search extends Component {
 
             {show === "search" &&
               <Modal className="flex-container searchbar-modal minimal-header cta-menubar-pitch-modal" >
-                <div className="page-shim"></div>
+                <div
+                  className="page-shim"
+                  onClick={() => this.setState({show: "initial"})}
+                ></div>
                 <form className="search-form">
                   <div className="flex-container masthead">
                     <div className="flex-box form-inputs">
