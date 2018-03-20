@@ -69,7 +69,10 @@ class Search extends Component {
               {show === "initial" &&
               <div
                 className="menu-bar-pitch_menu-item"
-                onClick={() => { this.setState({show: "menu"}); }}
+                onClick={() => {
+                  this.setState({show: "menu"});
+                  this.props.showMobileMenu();
+                }}
               >
                 <span
                   className="icon icon--24-hamburger icon--size-24 icon--white icon--fallback-inverted"
@@ -81,7 +84,10 @@ class Search extends Component {
               {show === "menu" &&
               <div
                 className="menu-bar-pitch_menu-item"
-                onClick={() => { this.setState({show: "initial"}) }}
+                onClick={() => {
+                  this.setState({show: "initial"});
+                  this.props.hideMobileMenu(); 
+                }}
               >
                 <span
                   className="icon icon--white"
