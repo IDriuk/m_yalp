@@ -10,16 +10,17 @@ import SearchIconSmall from '../assets/18/search_small';
 import Close from '../assets/18/close';
 import Marker from '../assets/18/marker';
 import HamburgerIcon from '../assets/24/hamburger';
+import CloseIcon from '../assets/24/close';
 
 class Search extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {showForm: false};
+    this.state = {show: "initial"};
   }
 
   render() {
-    const { showForm } = this.state;
+    const { show } = this.state;
 
     return (
       <div className="search-bar webview-hidden collapsed" >
@@ -34,7 +35,7 @@ class Search extends Component {
           <div className="cta-menubar-pitch-icons">
 
             <div className="cta-menubar-pitch_left-icons u-pull-left">
-              {!showForm &&
+              {show === "initial" &&
               <div className="menu-bar-pitch_open-in-app">
                 <div className="button-content">
                   <span
@@ -45,18 +46,18 @@ class Search extends Component {
                   Open in App
                 </div>
               </div>}
-              {showForm &&
+              {show === "search" &&
                 <button
                   className="button-text"
-                  onClick={() => this.setState({showForm: false})}
+                  onClick={() => this.setState({show: "initial"})}
                 >Cancel</button>}
             </div>
 
             <div className="menu-bar-pitch_menu-icons cta-menubar-pitch_right-icons u-pull-right">
-              {!showForm &&
+              {show === "initial" &&
               <div
                 className="menu-bar-pitch_menu-item"
-                onClick={() => { console.log('hello world'); this.setState({showForm: true}); } }
+                onClick={() => { this.setState({show: "search"}); } }
               >
                 <span
                   className="icon icon--24-search icon--size-24 icon--white icon--fallback-inverted"
@@ -65,8 +66,11 @@ class Search extends Component {
                   <SearchIcon />
                 </span>
               </div>}
-              {!showForm &&
-              <div className="menu-bar-pitch_menu-item">
+              {show === "initial" &&
+              <div
+                className="menu-bar-pitch_menu-item"
+                onClick={() => { this.setState({show: "menu"}); }}
+              >
                 <span
                   className="icon icon--24-hamburger icon--size-24 icon--white icon--fallback-inverted"
                   style={{width: "24px", height: "24px"}}
@@ -74,13 +78,25 @@ class Search extends Component {
                   <HamburgerIcon />
                 </span>
               </div>}
-              {showForm &&
+              {show === "menu" &&
+              <div
+                className="menu-bar-pitch_menu-item"
+                onClick={() => { this.setState({show: "initial"}) }}
+              >
+                <span
+                  className="icon icon--white"
+                  style={{width: "24px", height: "24px"}}
+                >
+                  <CloseIcon />
+                </span>
+              </div>}
+              {show === "search" &&
               <button className="button-text">
                 <p className="search-text"> Search </p>
               </button>}
             </div>
 
-            {showForm &&
+            {show === "search" &&
               <Modal className="flex-container searchbar-modal minimal-header cta-menubar-pitch-modal" >
                 <div className="page-shim"></div>
                 <form className="search-form">
