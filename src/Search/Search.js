@@ -16,11 +16,18 @@ class Search extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {show: "initial"};
+    this.state = {show: "initial", showClose: "search", autoFocus: true};
+  }
+
+  componentDidUpdate() {
+    if (this.searchInput && this.state.autoFocus ) {
+      this.setState({autoFocus: false});
+      this.searchInput.focus();
+    }
   }
 
   render() {
-    const { show } = this.state;
+    const { show, showClose } = this.state;
 
     return (
       <div className="search-bar webview-hidden collapsed" >
@@ -49,7 +56,7 @@ class Search extends Component {
               {show === "search" &&
                 <button
                   className="button-text"
-                  onClick={() => this.setState({show: "initial"})}
+                  onClick={() => this.setState({show: "initial", autoFocus: true})}
                 >Cancel</button>}
             </div>
 
@@ -86,7 +93,7 @@ class Search extends Component {
                 className="menu-bar-pitch_menu-item"
                 onClick={() => {
                   this.setState({show: "initial"});
-                  this.props.hideMobileMenu(); 
+                  this.props.hideMobileMenu();
                 }}
               >
                 <span
@@ -116,19 +123,32 @@ class Search extends Component {
                           <SearchIconSmall />
                         </span>
                         <div className="flex-box input-holder">
-                          <input className="find-desc input input-reset" placeholder="e.g. tacos, Mel's" />
+                          <input
+                            className="find-desc input input-reset" placeholder="e.g. tacos, Mel's"
+                            onFocus={() => { this.setState({showClose: "search"}); } }
+                            ref={(el) => { this.searchInput = el; }}
+                          />
                         </div>
+                        {showClose === "search" &&
                         <span className="icon icon--gray-regular cancel" style={{width: "18px", height: "18px", display: "inline"}}>
                           <Close />
-                        </span>
+                        </span>}
                       </div>
                       <div className="fake-input flex-container input-with-icon">
                         <span className="icon icon--size-18 icon--gray-regular location-icon" style={{width: "18px", height: "18px", display: "block"}}>
                           <Marker />
                         </span>
                         <div className="flex-box input-holder">
-                          <input className="find-loc input input-reset" defaultValue="Kuala Lumpur" />
+                          <input
+                            className="find-loc input input-reset"
+                            defaultValue="Kuala Lumpur"
+                            onFocus={() => { this.setState({showClose: "location"}); } }
+                          />
                         </div>
+                        {showClose === "location" &&
+                        <span className="icon icon--gray-regular cancel" style={{width: "18px", height: "18px", display: "inline"}}>
+                          <Close />
+                        </span>}
                       </div>
                     </div>
                   </div>
